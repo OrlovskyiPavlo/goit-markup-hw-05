@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stilesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -32,13 +33,13 @@
             <ul class="contacts">
                 <li>
                     <a href="mailto:info@devstudio.com" class="mail">
-                        <svg>
+                        <svg class="svg-icon" width="16" height="12">
                             <use href="./images/sprite.svg#icon-envelope"></use>
                         </svg>info@devstudio.com</a>
                 </li>
                 <li>
                     <a href="tel:+380961111111" class="mobile">
-                    <svg>
+                    <svg class="svg-icon" width="10" height="16">
                         <use href="./images/sprite.svg#icon-smartphone"></use>
                     </svg>+38 096 111 11 11</a>
                 </li>
@@ -49,7 +50,7 @@
         <section class="hero">
             <div class="container wrapper">
                 <h1>Эффективные решения для вашего бизнеса</h1>
-                <button class="button">Заказать услугу</button>
+                <button class="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
          <!-- Особенности -->
@@ -101,15 +102,18 @@
         <section class="occupation">
             <div class="container">
                 <h2 class="occupation-title">Чем мы занимаемся</h2>
-                <ul class="occupation-direct">
-                    <li>
+                <ul class="occupation-list">
+                    <li class="occupation-list-item">
                         <img src="./images/img01.jpg" alt="Фото рабочего места 1" width="370">
+                        <p>Десктопные приложения</p>
                     </li>
-                    <li>
+                    <li class="occupation-list-item">
                         <img src="./images/img02.jpg" alt="Фото рабочего места 2" width="370">
+                        <p>Мобильные приложения</p>
                     </li>
-                    <li>
+                    <li class="occupation-list-item">
                         <img src="./images/img03.jpg" alt="Фото рабочего места 3" width="370">
+                        <p>Дизайнерские решения</p>
                     </li>
                 </ul>
             </div>
@@ -127,28 +131,28 @@
                             <ul class="group-social">
                                 <li class="social-link"> 
                                     <a href="#" class="icon">
-                                        <svg width="20" height="20">
+                                        <svg class="icon-socials" width="20" height="20">
                                             <use href="./images/sprite.svg#icon-instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-link">
                                     <a href="#" class="icon">
-                                        <svg width="20" height="20">
+                                        <svg class="icon-socials" width="20" height="20">
                                             <use href="./images/sprite.svg#icon-twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-link">
                                     <a href="#" class="icon">
-                                        <svg width="20" height="20">
+                                        <svg class="icon-socials" width="20" height="20">
                                             <use href="./images/sprite.svg#icon-facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-link">
                                     <a href="#" class="icon">
-                                        <svg width="20" height="20">
+                                        <svg class="icon-socials" width="20" height="20">
                                             <use href="./images/sprite.svg#icon-linkedin"></use>
                                         </svg>
                                     </a>
@@ -321,7 +325,7 @@
         </section>
     </main>
     <!--добро пожаловать в подвал-->
-    <footer>
+    <footer class="footer">
         <div class="container footer-flex">
             <div>
                 <a class="logo white" href="./index.html">
@@ -374,5 +378,15 @@
             </div>
         </div>       
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal-screen">
+            <button type="button" class="close-btn" data-modal-close>
+                <svg width="11" height="11">
+                    <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
