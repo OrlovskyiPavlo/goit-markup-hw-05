@@ -134,9 +134,6 @@ header {
 .blue {
   color: var(--accent-color);
 }
-.logo:focus {
-  outline: none;
-}
 .logo.black {
   margin-right: 93px;
 }
@@ -591,12 +588,16 @@ footer {
   transition-property: fill;
   transition-duration: var(--trans-duration);
 }
-.social-link:hover,
-.social-link:focus {
+.social-link:hover {
   background-color: var(--accent-color);
 }
-.social-link:hover svg,
-.social-link:focus svg {
+.social-link:hover svg {
+  fill: #ffffff;
+}
+.icon:focus {
+  background-color: var(--accent-color);
+}
+.icon:focus svg {
   fill: #ffffff;
 }
 .mail svg {
